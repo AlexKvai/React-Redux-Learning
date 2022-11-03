@@ -1,4 +1,4 @@
-import { ServerResponse, IUser, IRepo } from './../../models/models';
+import { ServerResponse, IUser, IRepo } from '../../models/models';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const githubApi = createApi({
