@@ -22,6 +22,7 @@ export const HomePage = () => {
 
    const clickHandler = (username: string) => {
       fetchRepos(username);
+      setDropdown(false);
    };
 
    return (
