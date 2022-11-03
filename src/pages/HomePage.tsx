@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { RepoCard } from '../components/RepoCard';
 import { useDebounce } from '../hooks/debounce';
 import {
    useLazyGetUserReposQuery,
@@ -55,6 +56,9 @@ export const HomePage = () => {
                {areReposLoading && (
                   <p className='text-center'>Repos are loading...</p>
                )}
+               {repos?.map((repo) => (
+                  <RepoCard repo={repo} key={repo.id} />
+               ))}
             </div>
          </div>
       </div>
